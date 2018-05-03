@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_b"
+    android:orientation="vertical"
+    tools:context="com.likeits.sanyou.ui.me.WithdrawActivity">
+
+    <include layout="@layout/layout_header_with_back_white"></include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/background_b">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:text="可提现金额"
+            android:textColor="@color/gray_normal" />
+
+        <TextView
+            android:id="@+id/tv_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingRight="20dip"
+            android:text="¥ 100"
+            android:textColor="@color/head_red"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="10dip"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:text="提现方式"
+            android:textColor="@color/gray_normal" />
+
+        <TextView
+            android:id="@+id/tv_band"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingRight="20dip"
+            android:text="提现到银行卡"
+            android:textColor="@color/gray_normal"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="1dip"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:text="姓名"
+            android:textColor="@color/gray_normal" />
+
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:paddingRight="20dip"
+            android:textColorHint="@color/gray_pressed"
+            android:hint="请输入姓名"
+            android:textColor="@color/gray_normal"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="1dip"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:text="选择银行"
+            android:textColor="@color/gray_normal" />
+
+        <TextView
+            android:id="@+id/tv_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingRight="20dip"
+            android:text=" 请选择银行>"
+            android:textColor="@color/gray_normal"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="1dip"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:text="银行卡号"
+            android:textColor="@color/gray_normal" />
+
+        <EditText
+            android:id="@+id/tv_bankcard"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:paddingRight="20dip"
+            android:textColorHint="@color/gray_pressed"
+            android:hint="请输入银行卡号"
+            android:inputType="number"
+            android:textColor="@color/gray_normal"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_withdraw"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:text="马上提现"
+        android:background="@color/head_red"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_normal"
+        android:gravity="center"/>
+</LinearLayout>

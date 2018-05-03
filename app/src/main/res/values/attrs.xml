@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomImageView">
+        <attr name="leftTopX" format="float" />
+        <attr name="leftTopY" format="float" />
+        <attr name="rightTopX" format="float" />
+        <attr name="rightTopY" format="float" />
+        <attr name="rightBottomX" format="float" />
+        <attr name="rightBottomY" format="float" />
+        <attr name="leftBottomX" format="float" />
+        <attr name="leftBottomY" format="float" />
+        <attr name="roundPx" format="float" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CircleProgressBar">
+        <attr name="RoundColor" format="color"/>
+        <attr name="RoundProgressColor" format="color"/>
+        <attr name="RoundWidth" format="dimension"/>
+        <attr name="TextColor" format="color" />
+        <attr name="TextSize" format="dimension" />
+        <attr name="Max" format="integer"/>
+        <attr name="DisplayPercent" format="boolean"/>
+        <attr name="bottom_content" format="boolean"/>
+        <attr name="bottom_content_color" format="color"/>
+        <attr name="bottom_content_text_size" format="dimension"/>
+        <attr name="is_set_bottom_content" format="boolean"/>
+        <attr name="Style">
+            <enum name="STROKE" value="0"/>
+            <enum name="FILL" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="AmountView">
+        <!-- 左右2边+-按钮的宽度 -->
+        <attr name="btnWidth" format="dimension" />
+        <!-- 中间TextView的宽度 -->
+        <attr name="tvWidth" format="dimension" />
+        <!--<attr name="tvColor" format="color"/>-->
+        <attr name="tvTextSize" format="dimension"/>
+        <attr name="btnTextSize" format="dimension"/>
+    </declare-styleable>
+</resources>

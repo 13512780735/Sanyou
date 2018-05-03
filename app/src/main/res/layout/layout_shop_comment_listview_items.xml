@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip">
+
+        <TextView
+            android:id="@+id/tv_tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户..."
+            android:textColor="@color/defualt_textcolor_c" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-09-05 17:09"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/defualt_textcolor_c" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:ellipsize="end"
+        android:padding="10dip"
+        android:text="商品很不错，我很喜欢！必须五星评分"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingBottom="10dip"
+        android:textColor="@color/defualt_textcolor_c"
+        android:text="顶点钓鱼灯夜钓灯调焦手电筒"/>
+</LinearLayout>

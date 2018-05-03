@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".wxapi.PayActivity">
+
+    <include
+        android:id="@+id/titlelayout"
+        layout="@layout/layout_header_with_back" />
+
+    <RelativeLayout
+        android:id="@+id/ddhk_pay_weixin"
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        android:layout_margin="10dip"
+        android:background="@drawable/base_edit_input">
+
+        <!--<CheckBox-->
+        <!--android:id="@+id/ck_ddhk_weixin"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginStart="10dip"-->
+        <!--android:button="@drawable/check_state"-->
+        <!--android:checked="true" />-->
+        <ImageView
+            android:id="@+id/ddhk_pay_ivweixin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/wxpay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/ddhk_pay_ivweixin"
+            android:textSize="16sp"
+            android:text="微信支付"/>
+        <TextView
+            android:id="@+id/ck_ddhk_weixin_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dip"
+            android:gravity="center_vertical"
+            android:text="XX" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ddhk_pay_zhifubao"
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        android:layout_marginEnd="10dip"
+        android:layout_marginStart="10dip"
+        android:background="@drawable/base_edit_input">
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/ck_ddhk_zhifubao"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginStart="10dip"-->
+            <!--android:button="@drawable/check_state" />-->
+
+        <ImageView
+            android:id="@+id/ddhk_pay_ivzhifubao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alipay"
+            android:layout_margin="20dip"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/ddhk_pay_ivzhifubao"
+            android:textSize="16sp"
+            android:text="支付宝支付"/>
+        <TextView
+            android:id="@+id/ck_ddhk_zhifubao_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dip"
+            android:gravity="center_vertical"
+            android:text="XX" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_b"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/head_red"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/bt_rlPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/bt_flphoto"
+                android:layout_width="70dip"
+                android:layout_height="70dip"
+                android:layout_gravity="center"
+                android:layout_margin="20dip">
+
+                <com.likeits.sanyou.view.CircleImageView
+                    android:id="@+id/iv_userAvatar"
+                    android:layout_width="70dip"
+                    android:layout_height="70dip"
+                   />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent">
+
+                    <ImageView
+                        android:id="@+id/iv_message_chat_v1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/icon_camera" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/bt_flphoto"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:background="@color/defualt_textcolor_g"
+                    android:padding="2dip"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_ivSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dip"
+                android:src="@mipmap/me_icon_setting" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_Posts"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_tvPosts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_tvPosts"
+                    android:gravity="center_horizontal"
+                    android:text="我的帖子"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_friend"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_tvFriend01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_tvFriend01"
+                    android:gravity="center_horizontal"
+                    android:text="我的好友"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_Collect"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_tvCollect01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_tvCollect01"
+                    android:gravity="center_horizontal"
+                    android:text="我的收藏"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_allOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="3dip"
+                android:layout_height="15dip"
+                android:layout_centerVertical="true"
+                android:background="@color/head_red"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view"
+                android:paddingLeft="5dip"
+                android:text="全部订单" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="查看全部订单"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:textColor="@color/defualt_textcolor_f"
+                android:drawableRight="@mipmap/icon_right"/>
+        </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_tvPayment"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/me_icon_payment"
+            android:text="待付款"
+            android:textColor="@color/defualt_textcolor_f"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"
+            android:layout_weight="1"></TextView>
+        <TextView
+            android:id="@+id/tv_tvDelivery"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/me_icon_awaiting_delivery"
+            android:text="待发货"
+            android:textColor="@color/defualt_textcolor_f"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"
+            android:layout_weight="1"></TextView>0
+        <TextView
+            android:id="@+id/tv_tvReceiving"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/me_icon_wait_for_receiving"
+            android:text="待收货"
+            android:textColor="@color/defualt_textcolor_f"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"
+            android:layout_weight="1"></TextView>
+        <TextView
+            android:id="@+id/tv_tvComment"
+            android:layout_width="0dip"
+            android:drawableTop="@mipmap/me_iocn_comment"
+            android:text="已完成"
+            android:textColor="@color/defualt_textcolor_f"
+            android:gravity="center_horizontal"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></TextView>
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"    
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginTop="10dip">
+        <RelativeLayout
+            android:id="@+id/tv_rlFriend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip">
+
+            <TextView
+                android:id="@+id/tv_tvFriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="我的钓友"
+                android:drawableLeft="@mipmap/me_icon_friend"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dip"
+                android:textColor="@color/defualt_textcolor_c"
+                />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_right" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/line_color"></View>
+        <RelativeLayout
+            android:id="@+id/tv_rlReturnCarsh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip">
+
+            <TextView
+                android:id="@+id/tv_tvReturnCarsh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="我的返现"
+                android:drawableLeft="@mipmap/me_icon_return_carsh"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dip"
+                android:textColor="@color/defualt_textcolor_c"
+                />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_right" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/line_color"></View>
+        <RelativeLayout
+            android:id="@+id/tv_rlShoppingCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip">
+
+            <TextView
+                android:id="@+id/tv_tvShoppingCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="我的购物车"
+                android:drawableLeft="@mipmap/me_icon_shopping_cart"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dip"
+                android:textColor="@color/defualt_textcolor_c"  />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_right" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/line_color"></View>
+        <RelativeLayout
+            android:id="@+id/tv_rlCollect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip">
+
+            <TextView
+                android:id="@+id/tv_tvCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="我的收藏"
+                android:drawableLeft="@mipmap/me_cion_collect"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dip"
+                android:textColor="@color/defualt_textcolor_c"  />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_right" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/line_color"></View>
+        <RelativeLayout
+            android:id="@+id/tv_rlFootprint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:visibility="gone"
+            android:layout_marginRight="10dip">
+
+            <TextView
+                android:id="@+id/tv_tvFootprint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="我的足迹"
+                android:drawableLeft="@mipmap/me_icon_footprint"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dip"
+                android:textColor="@color/defualt_textcolor_c"  />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_right" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/line_color"></View>
+        <RelativeLayout
+            android:id="@+id/tv_rlOpinion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip">
+
+            <TextView
+                android:id="@+id/tv_tvOpinion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="意见反馈"
+                android:drawableLeft="@mipmap/me_icon_opinion"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dip"
+                android:textColor="@color/defualt_textcolor_c"  />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_right" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/line_color"></View>
+        <RelativeLayout
+            android:id="@+id/rl_About"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip">
+
+            <TextView
+                android:id="@+id/tv_tvAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:text="关于"
+                android:drawableLeft="@mipmap/me_icon_about"
+                android:gravity="center_vertical"
+                android:drawablePadding="5dip"
+                android:textColor="@color/defualt_textcolor_c"  />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_right" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

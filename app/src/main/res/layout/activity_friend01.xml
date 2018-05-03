@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dip"
+    android:orientation="vertical"
+    tools:context="com.likeits.sanyou.message.ui.FriendActivity01">
+
+    <include layout="@layout/layout_header_with_back_img"></include>
+
+
+    <!--    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/friend_listview"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                android:layout_height="wrap_content"></com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="20dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:background="#FFFEFF"
+                android:gravity="center"
+                android:orientation="vertical"></LinearLayout>
+        </LinearLayout>-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:divider="@null"></ListView>
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/rc_bg_toast"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <com.likeit.as51scholarship.chat.message.utils.pingyin.SideBar
+            android:id="@+id/sidrbar"
+            android:layout_width="30.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center" />
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,145 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dip"
+            android:background="@mipmap/icon_login_header">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="20dip"
+                android:text="三友钓鱼"
+                android:textColor="@color/white"
+                android:textSize="26sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dip"
+            android:gravity="center_horizontal"
+            android:padding="10dip"
+            android:text="登录"
+            android:textColor="@color/color_button"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dip_xlarge"
+            android:layout_marginRight="@dimen/dip_xlarge"
+            android:layout_marginTop="@dimen/dip_xlarge"
+            android:orientation="horizontal"
+            android:padding="10dip">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_login_phone"/>
+            <com.likeits.sanyou.view.EditTextWithDel
+                android:id="@+id/login_et_phone"
+                android:layout_width="0dip"
+                android:layout_height="30dip"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dip"
+                android:background="@null"
+                android:drawablePadding="10dip"
+                android:hint="请输入您的手机号"
+                android:inputType="number"
+                android:textColorHint="@color/defualt_textcolor_d"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="@dimen/dip_xlarge"
+            android:layout_marginRight="@dimen/dip_xlarge"
+            android:background="@color/line_color"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:orientation="horizontal"
+            android:padding="10dip">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_login_password" />
+
+            <EditText
+                android:id="@+id/login_et_pwd"
+                android:layout_width="0dip"
+                android:layout_height="30dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="输入密码"
+                android:layout_marginLeft="10dip"
+                android:drawablePadding="10dip"
+                android:textColorHint="@color/defualt_textcolor_d"
+                android:textSize="14sp"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/login_tv_forget_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="找回密码"
+                android:padding="8dip"
+                android:textColor="@color/defualt_textcolor_c" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="@dimen/dip_xlarge"
+            android:layout_marginRight="@dimen/dip_xlarge"
+            android:background="@color/line_color"></View>
+
+        <TextView
+            android:id="@+id/login_tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dip_xlarge"
+            android:layout_marginRight="@dimen/dip_xlarge"
+            android:layout_marginTop="40dip"
+            android:background="@drawable/shape_round_login_btn_"
+            android:gravity="center"
+            android:padding="16dip"
+            android:text="登录"
+            android:textColor="@color/white" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dip_xlarge"
+           >
+
+            <TextView
+                android:id="@+id/login_tv_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="新用户注册"
+                android:padding="10dip"
+                android:textColor="@color/color_button" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

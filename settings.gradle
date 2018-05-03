@@ -1,0 +1,1 @@
+include ':app', ':kkeventbus_module', ':baseapp_module', ':pulltorefreshlibrary', ':bubbleseekbar', ':MobAPI', ':redpacketlibrary', ':easeui', ':pictureselector', ':FastBleLib'

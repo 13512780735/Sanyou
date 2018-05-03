@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/menu_item_add_admin"
+        style="@style/chat_room_menu_item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+
+        <TextView
+            style="@style/chat_room_menu_item_text_style"
+            android:layout_width="200dip"
+            android:layout_gravity="center"
+            android:text="增加管理员" />
+
+        <TextView style="@style/chat_room_menu_item_splitter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_item_rm_admin"
+        style="@style/chat_room_menu_item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+
+        <TextView
+            style="@style/chat_room_menu_item_text_style"
+            android:layout_width="200dip"
+            android:layout_gravity="center"
+            android:text="删除管理员特权" />
+
+        <TextView style="@style/chat_room_menu_item_splitter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_item_transfer_owner"
+        style="@style/chat_room_menu_item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+
+        <TextView
+            style="@style/chat_room_menu_item_text_style"
+            android:layout_width="200dip"
+            android:layout_gravity="center"
+            android:text="转移群主" />
+
+        <TextView style="@style/chat_room_menu_item_splitter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_item_remove_member"
+        style="@style/chat_room_menu_item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+
+        <TextView
+            style="@style/chat_room_menu_item_text_style"
+            android:layout_width="200dip"
+            android:layout_gravity="center"
+            android:text="移去成员" />
+
+        <TextView style="@style/chat_room_menu_item_splitter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_item_add_to_blacklist"
+        style="@style/chat_room_menu_item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+
+        <TextView
+            style="@style/chat_room_menu_item_text_style"
+            android:layout_width="200dip"
+            android:layout_gravity="center"
+            android:text="加入黑名单" />
+
+        <TextView style="@style/chat_room_menu_item_splitter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_item_remove_from_blacklist"
+        style="@style/chat_room_menu_item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+
+        <TextView
+            style="@style/chat_room_menu_item_text_style"
+            android:layout_width="200dip"
+            android:layout_gravity="center"
+            android:text="删除从黑名单" />
+
+        <TextView style="@style/chat_room_menu_item_splitter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_item_mute"
+        style="@style/chat_room_menu_item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+
+        <TextView
+            style="@style/chat_room_menu_item_text_style"
+            android:layout_width="200dip"
+            android:layout_gravity="center"
+            android:text="静音" />
+
+        <TextView style="@style/chat_room_menu_item_splitter" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/menu_item_unmute"
+        style="@style/chat_room_menu_item_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+
+        <TextView
+            style="@style/chat_room_menu_item_text_style"
+            android:layout_width="200dip"
+            android:layout_gravity="center"
+            android:text="取消静音" />
+
+        <TextView style="@style/chat_room_menu_item_splitter" />
+    </LinearLayout>
+
+</LinearLayout>

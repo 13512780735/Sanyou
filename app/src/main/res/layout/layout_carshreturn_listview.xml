@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip">
+        <TextView
+            android:id="@+id/tv_sn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/gray_normal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dip"
+            android:text=""/>
+        <TextView
+            android:id="@+id/tv_shopName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/gray_normal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="20dip"
+            android:text=""/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="1dip"
+        android:layout_height="50dip">
+        <TextView
+            android:id="@+id/tv_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/head_red"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dip"
+
+            android:text=""/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/gray_normal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="20dip"
+            android:text=""/>
+    </RelativeLayout>
+</LinearLayout>

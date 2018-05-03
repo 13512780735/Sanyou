@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dip"
+    android:background="@color/white"
+    android:layout_marginBottom="1dip"
+    android:orientation="horizontal">
+
+    <com.likeits.sanyou.view.CircleImageView
+        android:id="@+id/me_header_avatar"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dip"
+        android:src="@mipmap/icon_test04" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dip"
+        android:gravity="center_vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/me_header_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小灰灰"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/me_header_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/me_header_name"
+            android:layout_marginTop="10dip"
+            android:textColor="@color/defualt_textcolor_c"
+            android:text="568米以内"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加好友"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dip"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:textColor="@color/head_red"
+
+        android:drawableLeft="@mipmap/icon_add_friend"/>
+    <TextView
+        android:id="@+id/tv_add01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已添加"
+        android:visibility="gone"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dip"
+        android:gravity="center_vertical"
+        android:textColor="@color/head_red"
+        android:drawableLeft="@mipmap/icon_add_friend"/>
+</LinearLayout>

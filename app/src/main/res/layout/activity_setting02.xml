@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_b"
+    android:orientation="vertical"
+    tools:context="com.likeits.sanyou.ui.me.Setting02Activity">
+
+    <include layout="@layout/layout_header_with_back_white"></include>
+
+    <RelativeLayout
+        android:id="@+id/tv_rlMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_tvMessag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:padding="10dip"
+            android:text="消息提醒"
+            android:textColor="@color/defualt_textcolor_c" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tv_rlBlacklist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_tvBlacklist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:padding="10dip"
+            android:text="黑名单"
+            android:textColor="@color/defualt_textcolor_c" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tv_rlClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:padding="10dip"
+            android:text="清除缓存"
+            android:textColor="@color/defualt_textcolor_c" />
+
+
+        <TextView
+            android:id="@+id/tv_tvClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@mipmap/icon_right"
+            android:text="1.1M"
+            android:textColor="@color/defualt_textcolor_c" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tv_rlAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_tvAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:padding="10dip"
+            android:text="关于"
+            android:textColor="@color/defualt_textcolor_c" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_right" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dip"
+        android:text="退出账号"
+        android:textColor="@color/defualt_textcolor_c" />
+</LinearLayout>

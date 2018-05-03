@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_b"
+    android:orientation="vertical"
+    tools:context="com.likeits.sanyou.ui.me.MyfriendActivity">
+
+    <include layout="@layout/layout_header_with_back_img_white"></include>
+
+    <!--   <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="42dp"
+           android:background="@color/white"
+           android:orientation="vertical">
+
+           <RadioGroup
+               android:id="@+id/contact_radio_group"
+               android:layout_width="match_parent"
+               android:layout_height="40dip"
+               android:orientation="horizontal">
+
+               <RadioButton
+                   android:id="@+id/radio_message"
+                   android:layout_width="0dip"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="1"
+                   android:button="@null"
+                   android:checked="true"
+                   android:drawablePadding="5dp"
+                   android:gravity="center_horizontal"
+                   android:paddingBottom="10dp"
+                   android:paddingTop="10dp"
+                   android:text="消息"
+                   android:textColor="@drawable/selected_contacts_tab__butt"
+                   android:textSize="14sp" />
+
+
+               <RadioButton
+                   android:id="@+id/radio_contact"
+                   android:layout_width="0dip"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="1"
+                   android:button="@null"
+                   android:checked="false"
+                   android:drawablePadding="5dp"
+                   android:gravity="center_horizontal"
+                   android:paddingBottom="10dp"
+                   android:paddingTop="10dp"
+                   android:text="通讯录"
+                   android:textColor="@drawable/selected_contacts_tab__butt"
+                   android:textSize="14sp" />
+           </RadioGroup>
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:layout_marginTop="1dip"
+               android:orientation="horizontal">
+
+
+               <View
+                   android:id="@+id/line_message"
+                   android:layout_width="0dip"
+                   android:layout_height="2dp"
+                   android:layout_toLeftOf="@+id/line"
+                   android:layout_weight="1"
+                   android:background="@color/head_red"
+                    />
+
+               <View
+                   android:id="@+id/line_contact"
+                   android:layout_width="0dip"
+                   android:layout_height="2dp"
+                   android:layout_toRightOf="@+id/line"
+                   android:layout_weight="1"
+                   android:background="@color/head_red"
+                   android:visibility="invisible" />
+           </LinearLayout>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/line_height"
+               android:layout_alignParentBottom="true"
+               android:background="@color/line_color" />
+       </RelativeLayout>
+
+       <ListView
+           android:id="@+id/message_listview"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/white"
+           android:divider="@color/line_color"
+           android:dividerHeight="1dip"></ListView>
+       <LinearLayout
+           android:id="@+id/ll_llContact"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:visibility="gone"
+           android:orientation="vertical">
+           <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+               android:id="@+id/contact_scrollView"
+               android:layout_width="match_parent"
+               android:layout_height="0dip"
+               android:layout_weight="1"
+
+               android:background="@color/background_b">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical">
+
+                   <include layout="@layout/layout_contact_content"></include>
+               </LinearLayout>
+
+           </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+       </LinearLayout>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/base_edit_input"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rgTools"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@null"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_message"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="消息"
+                    android:textColor="@drawable/selected_contacts_tab__butt"
+                    android:textSize="14sp" />
+
+
+                <RadioButton
+                    android:id="@+id/radio_contact"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="通讯录"
+                    android:textColor="@drawable/selected_contacts_tab__butt"
+                    android:textSize="14sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="1dip"
+            android:orientation="horizontal">
+
+
+            <View
+                android:id="@+id/line_message"
+                android:layout_width="0dip"
+                android:layout_height="2dp"
+                android:layout_toLeftOf="@+id/line"
+                android:layout_weight="1" android:visibility="invisible"
+
+                android:background="@color/head_red" />
+
+            <View
+                android:id="@+id/line_contact"
+                android:layout_width="0dip"
+                android:layout_height="2dp"
+                android:layout_toRightOf="@+id/line"
+                android:layout_weight="1"
+                android:background="@color/head_red"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <com.likeits.sanyou.view.NoScrollViewPager
+        android:id="@+id/chat_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/defualt_window_background"></com.likeits.sanyou.view.NoScrollViewPager>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_b"
+    tools:context="com.likeits.sanyou.ui.me.MyOpinionActivity">
+    <include layout="@layout/layout_header_with_back_white"> </include>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:background="@color/white">
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:gravity="top"
+            android:hint="请提出您的意见或者反馈"
+            android:textSize="14sp"
+            android:padding="10dip"
+            android:background="@null"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_llPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="10dip"
+        android:padding="10dip">
+
+        <TextView
+            android:id="@+id/tv_tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/defualt_textcolor_c"
+            android:gravity="center_vertical"
+            android:padding="10dip"
+            android:text="联系方式:" />
+
+        <EditText
+            android:id="@+id/ed_edPhone"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:hint="请输入手机号"
+            android:textColorHint="@color/defualt_textcolor_f"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_llEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginTop="1dip"
+        android:padding="10dip">
+
+        <TextView
+            android:id="@+id/tv_tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/defualt_textcolor_c"
+            android:gravity="center_vertical"
+            android:padding="10dip"
+            android:text="邮箱:" />
+
+        <EditText
+            android:id="@+id/ed_edEmail"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:hint="请输入邮箱"
+            android:textColorHint="@color/defualt_textcolor_f"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

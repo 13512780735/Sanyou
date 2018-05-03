@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.likeits.sanyou.ui.shop.ShopDetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/rl_header"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/header_line"
+        android:layout_alignParentStart="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <!--       <View
+                   android:id="@+id/header_line"
+                   android:layout_width="fill_parent"
+                   android:layout_height="1dp"
+                   android:layout_alignParentBottom="true"
+                   android:background="@color/bgcolor" />-->
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="60.0dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/header_back_bg"
+            android:drawableLeft="@mipmap/icon_red_back"
+            android:drawableStart="@mipmap/icon_red_back"
+            android:paddingLeft="10dp" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/sliding_tabs"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/head_red"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="@color/head_red"
+            app:tabTextColor="@color/defualt_textcolor" />
+
+        <ImageView
+            android:id="@+id/iv_header_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:padding="5dip"
+            android:visibility="gone"
+            android:src="@mipmap/icon_share" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_BackHome"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:textColor="@color/defualt_textcolor_c"
+                android:drawableTop="@mipmap/tab_home_pre"
+                android:text="首 页"
+                android:gravity="center"
+                android:paddingTop="5dip"
+                android:layout_weight="1"/>
+            <View
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:background="@color/line_color"></View>
+            <TextView
+                android:id="@+id/tv_collect"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:textColor="@color/defualt_textcolor_c"
+                android:drawableTop="@mipmap/icon_uncollect"
+                android:paddingTop="5dip"
+                android:text="收藏"
+                android:gravity="center"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/device_button"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="加入购物车" />
+
+        <TextView
+            android:id="@+id/tv_buy"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/head_red"
+            android:text="立即购买" />
+    </LinearLayout>
+</LinearLayout>

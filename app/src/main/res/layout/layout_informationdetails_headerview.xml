@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_b"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="10dip"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="热烈庆祝三友钓鱼灯微信小程序商城震撼上线 !" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:orientation="horizontal">
+
+            <com.likeits.sanyou.view.CircleImageView
+                android:id="@+id/user_avatar"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_margin="10dip"
+                android:src="@mipmap/test01" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/weather_avatar"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:text="三友钓鱼官网"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:text="14:25"
+                    android:textColor="@color/defualt_textcolor_c"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dip">
+
+                <TextView
+                    android:id="@+id/tv_add_friend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:layout_toLeftOf="@+id/tv_like"
+                    android:drawableLeft="@mipmap/icon_imformaion_add"
+                    android:gravity="center_vertical"
+                    android:text="加好友"
+                    android:textColor="@color/head_red"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@mipmap/icon_like"
+                    android:drawablePadding="10dip"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/defualt_textcolor_c"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            android:src="@mipmap/banner03" />
+
+        <com.likeits.sanyou.utils.richtext.RichText
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>

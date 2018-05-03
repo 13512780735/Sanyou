@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_b"
+    android:orientation="vertical"
+    tools:context="com.likeits.sanyou.ui.me.SettingActivity">
+
+    <include layout="@layout/layout_header_with_back_white"></include>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_Avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:padding="10dip">
+
+            <TextView
+                android:id="@+id/tv_tvAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:text="头像"
+                android:textColor="@color/defualt_textcolor_c" />
+
+
+            <FrameLayout
+                android:id="@+id/bt_flphoto"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <com.likeits.sanyou.view.CircleImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:padding="10dip"
+                    android:src="@mipmap/test01" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent">
+
+                    <ImageView
+                        android:id="@+id/iv_message_chat_v1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/icon_camera1" />
+                </RelativeLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/line_color"></View>
+
+        <LinearLayout
+            android:id="@+id/rl_rlnickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="horizontal"
+            android:padding="10dip">
+
+            <TextView
+                android:id="@+id/tv_tvnickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:text="昵称"
+                android:textColor="@color/defualt_textcolor_c" />
+
+            <EditText
+                android:id="@+id/ed_ednickName"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="请输入昵称"
+                android:textColorHint="@color/defualt_textcolor_f"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/line_color"></View>
+
+        <LinearLayout
+            android:id="@+id/rl_rlQQ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="horizontal"
+            android:padding="10dip">
+
+            <TextView
+                android:id="@+id/tv_tvQQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:text="QQ"
+                android:textColor="@color/defualt_textcolor_c" />
+
+            <EditText
+                android:id="@+id/edQQ"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="请输入QQ号"
+                android:textColorHint="@color/defualt_textcolor_f"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/line_color"></View>
+
+        <LinearLayout
+            android:id="@+id/rl_rlGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="horizontal"
+            android:padding="10dip">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:text="性别"
+                android:textColor="@color/defualt_textcolor_c" />
+
+            <TextView
+                android:id="@+id/tv_tvGender"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="5dip"
+                android:drawableRight="@mipmap/nav_down"
+                android:gravity="right|center_vertical"
+                android:text="男"
+                android:textColorHint="@color/defualt_textcolor_f"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/line_color"></View>
+
+        <LinearLayout
+            android:id="@+id/rl_rlBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="horizontal"
+            android:padding="10dip">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dip"
+                android:text="生日"
+                android:textColor="@color/defualt_textcolor_c" />
+
+            <TextView
+                android:id="@+id/tv_tvBirthday"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="5dip"
+                android:drawableRight="@mipmap/nav_down"
+                android:gravity="right|center_vertical"
+                android:text="00-00-00"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_rlAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dip"
+            android:text="地址"
+            android:textColor="@color/defualt_textcolor_c" />
+
+        <EditText
+            android:id="@+id/ed_edAddress"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:hint="请输入地址"
+            android:textColorHint="@color/defualt_textcolor_f"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_rlphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dip"
+            android:text="手机号"
+            android:textColor="@color/defualt_textcolor_c" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:textColorHint="@color/defualt_textcolor_f"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rl_change_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dip"
+            android:text="修改密码"
+            android:textColor="@color/defualt_textcolor_c" />
+
+        <TextView
+            android:id="@+id/tv_change_pwd"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableRight="@mipmap/icon_right"
+            android:gravity="right|center_vertical"
+            android:textColorHint="@color/defualt_textcolor_f"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/bt_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:padding="10dip"
+        android:text="退出账号"
+        android:textColor="@color/defualt_textcolor_c"
+        android:textSize="14sp" />
+    <!--    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+            android:id="@+id/setting_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@color/background_b">
+        </com.handmark.pulltorefresh.library.PullToRefreshScrollView>-->
+</LinearLayout>
