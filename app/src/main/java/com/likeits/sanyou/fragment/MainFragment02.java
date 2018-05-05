@@ -40,6 +40,8 @@ import com.likeits.sanyou.ui.device.Device04Activity;
 import com.likeits.sanyou.ui.device.Device09Activity;
 import com.likeits.sanyou.utils.HttpUtil;
 import com.likeits.sanyou.utils.LoaddingDialog;
+import com.likeits.sanyou.utils.StringUtil;
+import com.likeits.sanyou.utils.UtilPreference;
 import com.likeits.sanyou.view.CustomDialog;
 import com.loopj.android.http.RequestParams;
 
@@ -69,6 +71,8 @@ public class MainFragment02 extends BaseFragment implements View.OnClickListener
     private String getAddress;
     private LoaddingDialog loading;
     private List<DeviceBean> deviceData;
+    private String name1;
+    private String name01;
 
     @Override
     protected int setContentView() {
@@ -77,6 +81,7 @@ public class MainFragment02 extends BaseFragment implements View.OnClickListener
 
     @Override
     protected void lazyLoad() {
+        name1 = UtilPreference.getStringValue(getActivity(), "BlueName");
         loading = new LoaddingDialog(getContext());
         deviceData = new ArrayList<>();
         initDeviceList();
@@ -188,18 +193,28 @@ public class MainFragment02 extends BaseFragment implements View.OnClickListener
                     /**
                      * 蓝牙名字获取
                      */
-                    String name1 = String.valueOf(mResultAdapter.getItem(position).getDevice().getName());
+                    name1 = String.valueOf(mResultAdapter.getItem(position).getDevice().getName());
+                    /**
+                     * 第一个字母
+                     */
+                    name01 = name1.substring(0, 1);
                     getAddress = String.valueOf(mResultAdapter.getItem(position).getDevice().getAddress());
+
                     Log.d("TAG", "getAddress-->" + getAddress);
+                    Log.e("TAG5858", "getName-->" + mResultAdapter.getItem(position).getDevice().getName());
                     //name = name1.substring(0, 4);
                     // System.out.println(aString.substring(aString.length()-1, aString.length()));
                     name = name1.substring(name1.length() - 3, name1.length());
-                    Log.d("TAG", "name-->" + name);
+                    Log.e("TAG", "name-->" + name);
                     Log.d("TAG", "name1-->" + name1);
-                    if("-00".equals(name)||"-32".equals(name)||"-42".equals(name)){
+                    if ("X".equals(name01) || "Q".equals(name01)) {
                         mBluetoothService.cancelScan();
                         mBluetoothService.connectDevice(mResultAdapter.getItem(position));
-                    }else{
+                    }
+//                    if ("-00".equals(name) || "-32".equals(name) || "-42".equals(name)) {
+//
+//                    }
+                    else {
                         showToast("不可连接");
                         return;
                     }
@@ -234,6 +249,7 @@ public class MainFragment02 extends BaseFragment implements View.OnClickListener
 
     private CustomDialog customDialog;
     private String address;
+    private String name2;
     private BluetoothService.Callback callback = new BluetoothService.Callback() {
         @Override
         public void onStartScan() {
@@ -248,8 +264,16 @@ public class MainFragment02 extends BaseFragment implements View.OnClickListener
         @Override
         public void onScanning(ScanResult result) {
             Log.d("TAG", "333");
+            if (!StringUtil.isBlank(result.getDevice().getName())) {
+//                Log.e("TAG5656", result.getDevice().getName());
+                name2 = result.getDevice().getName();
+            } else return;
             mResultAdapter.addResult(result);
             mResultAdapter.notifyDataSetChanged();
+            if (name2.equals(name1)) {
+                mBluetoothService.connectDevice(result);
+            } else return;
+
         }
 
         @Override
@@ -303,7 +327,12 @@ public class MainFragment02 extends BaseFragment implements View.OnClickListener
                 Intent intent = new Intent(getActivity(), Device01Activity.class);
                 intent.putExtra("address", getAddress);
                 startActivity(intent);
+            } else {
+                Intent intent = new Intent(getActivity(), Device01Activity.class);
+                intent.putExtra("address", getAddress);
+                startActivity(intent);
             }
+            UtilPreference.saveString(getActivity(), "BlueName", name1);
 //            if (deviceData.size() == 0) {
 //                showEnsureDialogTwo();
 //                return;
