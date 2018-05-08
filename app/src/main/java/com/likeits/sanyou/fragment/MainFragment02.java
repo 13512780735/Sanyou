@@ -73,6 +73,7 @@ public class MainFragment02 extends BaseFragment implements View.OnClickListener
     private List<DeviceBean> deviceData;
     private String name1;
     private String name01;
+    private String name3;
 
     @Override
     protected int setContentView() {
@@ -194,6 +195,9 @@ public class MainFragment02 extends BaseFragment implements View.OnClickListener
                      * 蓝牙名字获取
                      */
                     name1 = String.valueOf(mResultAdapter.getItem(position).getDevice().getName());
+                    String[] all=name1.split("-");
+                    name3=all[1];//截取光源字段
+                    Log.e("TAG",name3);
                     /**
                      * 第一个字母
                      */
@@ -207,7 +211,7 @@ public class MainFragment02 extends BaseFragment implements View.OnClickListener
                     name = name1.substring(name1.length() - 3, name1.length());
                     Log.e("TAG", "name-->" + name);
                     Log.d("TAG", "name1-->" + name1);
-                    if ("X".equals(name01) || "Q".equals(name01)) {
+                    if ("X".equals(name01) || "Q".equals(name01)|| "E".equals(name01)|| "H".equals(name01)|| "D".equals(name01)) {
                         mBluetoothService.cancelScan();
                         mBluetoothService.connectDevice(mResultAdapter.getItem(position));
                     }
@@ -315,15 +319,15 @@ public class MainFragment02 extends BaseFragment implements View.OnClickListener
         @Override
         public void onServicesDiscovered() {
             progressDialog.dismiss();
-            if ("-00".equals(name)) {
+            if ("00".equals(name3)) {
                 Intent intent = new Intent(getActivity(), Device09Activity.class);
                 intent.putExtra("address", getAddress);
                 startActivity(intent);
-            } else if ("-32".equals(name)) {
+            } else if ("32".equals(name3)) {
                 Intent intent = new Intent(getActivity(), Device04Activity.class);
                 intent.putExtra("address", getAddress);
                 startActivity(intent);
-            } else if ("-42".equals(name)) {
+            } else if ("42".equals(name3)) {
                 Intent intent = new Intent(getActivity(), Device01Activity.class);
                 intent.putExtra("address", getAddress);
                 startActivity(intent);
